@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Cat Clicker 2</title>
+        <style>
+            body {
+                margin: 0 auto;
+                width: 980px;
+            }
+
+            .content {
+                width: 600px;
+                margin: 0 auto;
+            }
+
+            .image-box {
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            img {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="image-box">
+                <p id="cat1Name"></p>
+                <p>Clicked: <span id="cat1Click"></span> times</p>
+                <img src="images/cat1.jpg" alt="Udacity Cat">
+            </div>
+
+            <div class="image-box">
+                <p id="cat2Name"></p>
+                <p>Clicked: <span id="cat2Click"></span> times</p>
+                <img src="images/cat2.jpg" alt="Udacity Cat">
+            </div>
+        </div>
+        <script>
+            (function() {
+
+                // same implementation the cat clicker as in the other example
+                // implemented using closures
+                
+                let cat1Name = "Tom";
+                let cat2Name = "Kelechi";
+
+                let count1 = 0,
+                    count2 = 0;
+
+                const cat1NamePara = document.getElementById("cat1Name"),
+                      cat2NamePara = document.getElementById("cat2Name"),
+                      images = document.getElementsByTagName("img"),
+                      cat1ClickCount = document.getElementById("cat1Click"),
+                      cat2ClickCount = document.getElementById("cat2Click");
+                
+                cat1NamePara.append(document.createTextNode(cat1Name));
+                cat2NamePara.append(document.createTextNode(cat2Name));
+
+                const clicker = function(node, placeholderNode) {
+                    let counter = 0;
+                    if (node !== null) {
+                        node.addEventListener('click', function() {
+                            counter += 1;
+                            placeholderNode.textContent = counter;
+                        }, false);
+                    }
+                }
+
+                /* for (let i = 0; i < images.length; i += 1) {
+                    clicker(images[i]);
+                } */
+
+                clicker(images[0], cat1ClickCount);
+                clicker(images[1], cat2ClickCount);
+            })();
+        </script>
+    </body>
+</html>
