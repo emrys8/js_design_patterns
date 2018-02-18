@@ -1,0 +1,42 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: #fff;
+    color: #fff;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* image container layout styling */
+.main-container {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    background-color: pink;
+}
+
+.list-panel {
+    width: 25%;
+    height: 300px;
+    margin-right: 10%;
+    float: left;
+    background-color: #000;
+}
+
+.image-box {
+    width: 65%;
+    height: 300px;
+    float: right;
+    background-color: #000;
+}
+
