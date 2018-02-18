@@ -36,3 +36,30 @@ var cats = [
 
     listPanel.appendChild(list);
 }());
+
+
+// get all lists
+var listItems = document.getElementsByTagName('li');
+
+for (var i = 0; i < cats.length; i++) { // conditional: listItems.length === cats.length
+    var listItem = listItems[i];
+    var cat = cats[i];
+    listItem.addEventListener('click', (function(catCopy) {
+        var catName = catCopy.name;
+        var catClickCount = catCopy.countClick;
+        var catImage = catCopy.image;
+
+        // create an image -- to be optimized later
+        var image = document.createElement('img');
+
+        return function() {
+            catNamePara.textContent = catName;
+            catClickCountPara.textContent = catClickCount;
+            image.setAttribute('src', catImage);
+            image.setAttribute('alt', 'Udacity lovely cat image');
+
+            image.innerHTML = "";
+            imageBox.appendChild(image);
+        };
+    }(cat)), false);
+}
