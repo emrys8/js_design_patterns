@@ -38,7 +38,6 @@ var cats = [
 }());
 
 
-// get all lists
 var listItems = document.getElementsByTagName('li');
 
 for (var i = 0; i < cats.length; i++) { // conditional: listItems.length === cats.length
