@@ -58,7 +58,7 @@ for (var i = 0; i < cats.length; i++) { // conditional: listItems.length === cat
             image.setAttribute('src', catImage);
             image.setAttribute('alt', 'Udacity lovely cat image');
 
-            image.innerHTML = "";
+            imageBox.innerHTML = "";
             imageBox.appendChild(image);
         };
     }(cat)), false);
