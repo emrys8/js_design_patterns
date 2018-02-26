@@ -85,10 +85,8 @@ $(document).ready(() => {
         },
 
         render: function() {
-            // this.init();
             // get all lists
             const $allLists = $("#cat-list li");
-            // console.log($allLists.length);
             $allLists.each((idx, el) => {
                 $(el).click(() => {
                     // get cat with the key stored in each list item
@@ -98,6 +96,10 @@ $(document).ready(() => {
 
                     const $img = $("<img>").attr({ src: cat.image }, 
                                             { alt: `Udacity Cat ${cat.id}`});
+
+                    $img.click(() => {
+                        this.$clickCount.text(++cat.clickedTimes);
+                    });
                     this.$imageBox.html("");
                     this.$imageBox.append($img);
                 });
