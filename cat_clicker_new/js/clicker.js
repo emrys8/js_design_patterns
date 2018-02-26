@@ -98,7 +98,8 @@ $(document).ready(() => {
 
                     const $img = $("<img>").attr({ src: cat.image }, 
                                             { alt: `Udacity Cat ${cat.id}`});
-                    $this.imageBox = 
+                    this.$imageBox.html("");
+                    this.$imageBox.append($img);
                 });
             });
         }
