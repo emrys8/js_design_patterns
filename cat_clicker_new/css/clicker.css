@@ -55,6 +55,7 @@ p {
 
 .image-box img {
     width: 100%;
+    cursor: pointer;
 }
 
 /* list styling */
