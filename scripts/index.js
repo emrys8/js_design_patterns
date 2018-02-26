@@ -21,6 +21,18 @@ var cats = [
         name: 'Perry',
         countClick: 0,
         image: './images/cat3.jpg'
+    },
+
+    {
+        name: 'Viktor',
+        countClick: 0,
+        image: './images/cat4.jpg'
+    },
+
+    {
+        name: 'Venn',
+        countClick: 0,
+        image: './images/cat5.jpg'
     }
 ];
 
