@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Cat Clicker Premium</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="css/clicker.css">
 </head>
 
 <body>
@@ -12,21 +12,23 @@
     <section class="main-container">
 
         <!-- for the list of all cats -->
-        <div class="list-panel">
+        <div class="list-panel" id="list-panel">
             <h2>All Cats</h2>
+            <ul class="cat-list" id="cat-list"></ul>
         </div>
 
         <!-- image-box -->
         <div class="image-container">
 
-            <p class="cat-name"></p>
-            <p class="cat-click-count"></p>
+            <p class="cat-name" id="cat-name"></p>
+            <p class="cat-click-count" id="cat-click-count"></p>
 
-            <div class="image-box">
+            <div class="image-box" id="image-box">
 
             </div>
         </div>
     </section>
+    <script src="js/jquery.js"></script>
     <script src="js/clicker.js"></script>
 </body>
 
