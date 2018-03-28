@@ -24,7 +24,7 @@ $(document).ready(() => {
 
         {
             id: 'cat04',
-            name: 'Obinze',
+            name: 'Purr',
             clickedTimes: 0,
             image: '../images/cat4.jpg'
         },
